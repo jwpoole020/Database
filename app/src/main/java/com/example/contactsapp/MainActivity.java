@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText nameEdit;
     Spinner spinner;
+    Spinner spinnerYear;
     Button addButton;
     Button getButton;
     DatabaseControl control;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         nameEdit = findViewById(R.id.nameEdit);
         spinner = findViewById(R.id.spinner);
+        spinnerYear = findViewById(R.id.spinnerYear);
         addButton = findViewById(R.id.addButton);
         getButton = findViewById(R.id.getButton);
         result = findViewById(R.id.result);
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String name = nameEdit.getText().toString();
                 String state = ((TextView) spinner.getSelectedView()).getText().toString();
+
                 control.open();
                 boolean itWorked = control.insert(name, state);
                 control.close();
@@ -67,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
+        ArrayAdapter<CharSequence> adapter1= ArrayAdapter.createFromResource(this,R.array.year, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerYear.setAdapter(adapter1);
 
 
     }
@@ -77,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
         control.open();
         String[] data=control.getAllNamesArray();
-        control.close();
 
+        control.close();
         recyclerView.setAdapter(new CustomAdapter(data));
     }
 }
