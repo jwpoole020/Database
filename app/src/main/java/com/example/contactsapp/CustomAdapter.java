@@ -13,12 +13,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView textView;
-
         public ViewHolder(View view) {
             super(view);
             textView = (TextView) view.findViewById(R.id.textView);
         }
-
         public TextView getTextView() {
             return textView;
         }
@@ -30,15 +28,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.text_row_item, viewGroup, false);
-
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.text_row_item, viewGroup, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-
         viewHolder.getTextView().setText(localDataSet[position]);
     }
 

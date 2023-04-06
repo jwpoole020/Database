@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinnerYear;
     Button addButton;
     Button getButton;
+    Button delButton;
     DatabaseControl control;
     TextView result;
     RecyclerView recyclerView;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         spinner = findViewById(R.id.spinner);
         spinnerYear = findViewById(R.id.spinnerYear);
         addButton = findViewById(R.id.addButton);
+        delButton = findViewById(R.id.delButton);
         getButton = findViewById(R.id.getButton);
         result = findViewById(R.id.result);
         recyclerView = findViewById(R.id.recyclerView);
@@ -63,6 +65,18 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Added "+name+" "+state, Toast.LENGTH_SHORT).show();
                 else
                     Toast.makeText(getApplicationContext(), "Failed "+name+" "+state, Toast.LENGTH_SHORT).show();
+                onResume();
+            }
+        });
+
+        delButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = nameEdit.getText().toString();
+                control.open();
+                control.delete(name);
+                control.close();
+                onResume();
             }
         });
 
@@ -73,8 +87,6 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter1= ArrayAdapter.createFromResource(this,R.array.year, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerYear.setAdapter(adapter1);
-
-
     }
     @Override
     public void onResume(){

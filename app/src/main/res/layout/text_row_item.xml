@@ -4,11 +4,20 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
-    android:gravity="center_vertical">
+    android:gravity="center_vertical"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="empty"/>
+        android:text="empty"
+        android:textSize="24sp"
+        android:textColor="#ff990099"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text=" empty"/>
 </FrameLayout>

@@ -30,6 +30,10 @@ public class DatabaseControl {
           return database.insert("contact", null, values) >0;
      }
 
+     public void delete(String n){
+          database.delete("contact", "name=\""+n+"\"", null);
+     }
+
      public String getState(String name){
           String querry = "select state from contact where name=\""+name+"\"";
           Cursor cursor = database.rawQuery(querry, null);
