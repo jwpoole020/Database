@@ -13,6 +13,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView textView;
+
         public ViewHolder(View view) {
             super(view);
             textView = (TextView) view.findViewById(R.id.textView);
