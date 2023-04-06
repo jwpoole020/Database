@@ -80,13 +80,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this, R.array.states, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this, R.array.teams, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        ArrayAdapter<CharSequence> adapter1= ArrayAdapter.createFromResource(this,R.array.year, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapterYear= ArrayAdapter.createFromResource(this,R.array.year, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerYear.setAdapter(adapter1);
+        spinnerYear.setAdapter(adapterYear);
     }
     @Override
     public void onResume(){

@@ -1,69 +1,51 @@
 <resources>
     <string name="app_name">Contacts App</string>
-    <string-array name="states">
-        <item>AL</item>
-        <item>AK</item>
-        <item>AZ</item>
-        <item>AR</item>
-        <item>CA</item>
-        <item>CO</item>
-        <item>CT</item>
-        <item>DE</item>
-        <item>FL</item>
-        <item>GA</item>
-        <item>HI</item>
-        <item>ID</item>
-        <item>IL</item>
-        <item>IN</item>
-        <item>IA</item>
-        <item>KS</item>
-        <item>KY</item>
-        <item>LA</item>
-        <item>ME</item>
-        <item>MD</item>
-        <item>MA</item>
-        <item>MI</item>
-        <item>MN</item>
-        <item>MS</item>
-        <item>MO</item>
-        <item>MT</item>
-        <item>NE</item>
-        <item>NV</item>
-        <item>NH</item>
-        <item>NJ</item>
-        <item>NM</item>
-        <item>NY</item>
-        <item>NC</item>
-        <item>ND</item>
-        <item>OH</item>
-        <item>OK</item>
-        <item>OR</item>
-        <item>PA</item>
-        <item>RI</item>
-        <item>SC</item>
-        <item>SD</item>
-        <item>TN</item>
-        <item>TX</item>
-        <item>UT</item>
-        <item>VT</item>
-        <item>VA</item>
-        <item>WA</item>
-        <item>WV</item>
-        <item>WI</item>
-        <item>WY</item>
+    <string-array name="teams">
+        <item>Avalanche</item>
+        <item>Blackhawks</item>
+        <item>Blues</item>
+        <item>Blue Jackets</item>
+        <item>Bruins</item>
+        <item>Canadiens</item>
+        <item>Canucks</item>
+        <item>Capitals</item>
+        <item>Coyotes</item>
+        <item>Devils</item>
+        <item>Ducks</item>
+        <item>Flames</item>
+        <item>Flyers</item>
+        <item>Golden Knights</item>
+        <item>Hurricanes</item>
+        <item>Islanders</item>
+        <item>Jets</item>
+        <item>Kings</item>
+        <item>Lightning</item>
+        <item>Maple Leafs</item>
+        <item>Oilers</item>
+        <item>Panthers</item>
+        <item>Penguins</item>
+        <item>Predators</item>
+        <item>Ranger</item>
+        <item>Sabres</item>
+        <item>Red Wings</item>
+        <item>Seattle Kraken</item>
+        <item>Senators</item>
+        <item>Sharks</item>
+        <item>Stars</item>
+        <item>Wild</item>
     </string-array>
 
     <string-array name="year">
-        <item>2000</item>
-        <item>2001</item>
-        <item>2002</item>
-        <item>2003</item>
-        <item>2004</item>
-        <item>2005</item>
-        <item>2006</item>
-        <item>2007</item>
-        <item>2008</item>
-        <item>2009</item>
-        <item>2010</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>10+</item>
     </string-array>
 </resources>
