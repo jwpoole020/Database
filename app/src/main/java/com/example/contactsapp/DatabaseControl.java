@@ -23,10 +23,11 @@ public class DatabaseControl {
           helper.close();
      }
 
-     public boolean insert(String name, String state){
+     public boolean insert(String name, String state, String year){
           ContentValues values = new ContentValues();
           values.put("name", name);
           values.put("state", state);
+          values.put("year", year);
           return database.insert("contact", null, values) >0;
      }
 

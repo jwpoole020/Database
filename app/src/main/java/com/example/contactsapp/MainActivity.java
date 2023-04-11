@@ -58,9 +58,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String name = nameEdit.getText().toString();
                 String state = ((TextView) spinner.getSelectedView()).getText().toString();
+                String year = ((TextView) spinnerYear.getSelectedView()).getText().toString();
 
                 control.open();
-                boolean itWorked = control.insert(name, state);
+                boolean itWorked = control.insert(name, state, year);
                 control.close();
                 if (itWorked)
                     Toast.makeText(getApplicationContext(), "Added "+name+" "+state, Toast.LENGTH_SHORT).show();
