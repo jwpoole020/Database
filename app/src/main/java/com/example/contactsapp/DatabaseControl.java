@@ -58,6 +58,21 @@ public class DatabaseControl {
           String[] array = new String[list.size()];
           return list.toArray(array);
      }
+     public String[] getAllTeamsArray() {
+          String query = "select state from contact";
+          Cursor cursor = database.rawQuery(query, null);
+          cursor.moveToFirst();
+          ArrayList<String> list = new ArrayList<String>();
+          while ((!cursor.isAfterLast())) {
+               String name = cursor.getString(0);
+               list.add(name);
+               cursor.moveToNext();
+          }
+          cursor.close();
+          String[] array = new String[list.size()];
+          return list.toArray(array);
+     }
+
      public ArrayList<String> getAllNames(){
           String query = "select name from contact";
           Cursor cursor = database.rawQuery(query, null);

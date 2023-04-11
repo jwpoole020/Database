@@ -96,8 +96,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         control.open();
         String[] data=control.getAllNamesArray();
+        String[] dataTeam=control.getAllTeamsArray();
         control.close();
-        CustomAdapter adapter = new CustomAdapter(data);
+        CustomAdapter adapter = new CustomAdapter(data, dataTeam);
         adapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
