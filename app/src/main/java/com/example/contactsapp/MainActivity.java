@@ -10,6 +10,7 @@ import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -92,11 +93,24 @@ public class MainActivity extends AppCompatActivity {
     public void onResume(){
         super.onResume();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         control.open();
         String[] data=control.getAllNamesArray();
-
         control.close();
-        recyclerView.setAdapter(new CustomAdapter(data));
+        CustomAdapter adapter = new CustomAdapter(data);
+        adapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CustomAdapter.ViewHolder viewHolder= (CustomAdapter.ViewHolder) view.getTag();
+                TextView textView= viewHolder.getTextView();
+                String name= textView.getText().toString();
+                result.setText(textView.getText().toString());
+                control.open();
+                String state=control.getState(name);
+                control.close();
+                result.setText(name+" - "+state);
+            }
+        });
+        recyclerView.setAdapter(adapter);
+
     }
 }
