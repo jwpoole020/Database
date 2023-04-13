@@ -36,15 +36,15 @@
     </string-array>
 
     <string-array name="year">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10+</item>
+        <item>1 Year</item>
+        <item>2 Years</item>
+        <item>3 Years</item>
+        <item>4 Years</item>
+        <item>5 Years</item>
+        <item>6 Years</item>
+        <item>7 Years</item>
+        <item>8 Years</item>
+        <item>9 Years</item>
+        <item>10+ Years</item>
     </string-array>
 </resources>

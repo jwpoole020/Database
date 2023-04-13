@@ -36,12 +36,20 @@ public class DatabaseControl {
      }
 
      public String getState(String name){
-          String querry = "select state from contact where name=\""+name+"\"";
-          Cursor cursor = database.rawQuery(querry, null);
+          String query = "select state from contact where name=\""+name+"\"";
+          Cursor cursor = database.rawQuery(query, null);
           cursor.moveToFirst();
           String state = cursor.getString(0);
           cursor.close();
           return state;
+     }
+     public String getYear(String name){
+          String query = "select year from contact where name=\""+name+"\"";
+          Cursor cursor = database.rawQuery(query, null);
+          cursor.moveToFirst();
+          String year = cursor.getString(0);
+          cursor.close();
+          return year;
      }
 
      public String[] getAllNamesArray(){

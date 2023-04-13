@@ -48,8 +48,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 control.open();
                 String state = control.getState(nameEdit.getText().toString());
+                String year = control.getYear(nameEdit.getText().toString());
                 control.close();
-                result.setText(state);
+                result.setText(state+" "+year);
             }
         });
 
@@ -64,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
                 boolean itWorked = control.insert(name, state, year);
                 control.close();
                 if (itWorked)
-                    Toast.makeText(getApplicationContext(), "Added "+name+" "+state, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Added "+name, Toast.LENGTH_SHORT).show();
                 else
-                    Toast.makeText(getApplicationContext(), "Failed "+name+" "+state, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Failed "+name, Toast.LENGTH_SHORT).show();
                 onResume();
             }
         });
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
 
         ArrayAdapter<CharSequence> adapterYear= ArrayAdapter.createFromResource(this,R.array.year, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapterYear.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerYear.setAdapter(adapterYear);
     }
     @Override
@@ -110,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 String state=control.getState(name);
                 control.close();
                 result.setText(name+" - "+state);
+                nameEdit.setText(name);
             }
         });
         recyclerView.setAdapter(adapter);
